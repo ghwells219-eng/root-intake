@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Root Intake</title>
+<meta name="description" content="Root Intake is a proposed intake pathway that asks about life events and circumstances, so dissociative identity disorder and other complex trauma disorders are found sooner.">
+<link rel="icon" href="root-intake-logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0B4A1C;--green-dark:#073212;--ink:#16301E;--cream:#F8F0E0;--card:#FFFDF7;--line:#DDD9C6;--line2:#C9C4AC;--soft:#E8E8D0;--muted:#3F4A3F;--muted2:#5B655B;--pale:#B8C898;--pale2:#C9D6BC;--pale3:#D5DDC9}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.55}
+a{color:var(--green)}a:hover{color:var(--green-dark)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;margin:0;line-height:1.15}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+nav{background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px}
+nav img{height:48px;width:auto;display:block}
+.links{display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;font-size:16px;font-weight:500}
+.links a{color:var(--ink);text-decoration:none;padding:10px 0}
+.btn{display:inline-flex;align-items:center;min-height:48px;background:var(--green);color:#fff !important;text-decoration:none;padding:12px 24px;border-radius:999px;font-weight:600;font-size:16px}
+.btn.alt{background:var(--card);color:var(--ink) !important;border:1px solid var(--line2)}
+.btn.lg{padding:16px 26px;font-size:17px}
+.eyebrow{margin:0;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+header.hero{padding:72px 0}
+header.hero .wrap{display:flex;flex-direction:column;gap:24px}
+header.hero img{width:min(560px,90%);height:auto;display:block}
+header.hero h1{max-width:900px;font-size:clamp(40px,6vw,76px);line-height:1.05;letter-spacing:-.02em}
+header.hero p.lead{margin:0;max-width:740px;font-size:21px;color:var(--muted)}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.band{background:var(--ink);color:#fff;padding:64px 0}
+.band h2{font-size:32px;margin-bottom:32px}
+.stats{display:flex;flex-wrap:wrap;gap:24px}
+.stat{flex:1 1 280px;display:flex;flex-direction:column;gap:10px}
+.stat b{font-family:'Playfair Display',Georgia,serif;font-size:72px;font-weight:700;line-height:1;color:var(--pale)}
+.stat small{font-size:14px;color:var(--pale2)}
+section{padding:88px 0}
+section.alt{background:var(--card)}
+.intro{display:flex;flex-direction:column;gap:12px;max-width:760px;margin-bottom:32px}
+.intro h2{font-size:40px}
+.intro p{margin:0;font-size:19px;color:var(--muted)}
+.cards{display:flex;flex-wrap:wrap;gap:20px}
+.card{flex:1 1 300px;background:var(--card);border-radius:18px;padding:32px;display:flex;flex-direction:column;gap:14px}
+.num{width:48px;height:48px;border-radius:999px;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700}
+.card h3{font-size:28px}
+.card p{margin:0;font-size:17px;color:var(--muted)}
+.two{display:flex;flex-wrap:wrap;gap:48px}
+.two>div,.two>figure{flex:1 1 420px;display:flex;flex-direction:column;gap:18px;margin:0}
+.two h2{font-size:34px}
+.two p,.two li{font-size:17px;color:var(--muted)}
+.two ul,.two ol{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:10px}
+figure.quote{background:var(--soft);border-radius:18px;padding:40px;justify-content:center;gap:16px}
+figure.quote blockquote{margin:0;font-family:'Playfair Display',Georgia,serif;font-size:27px;font-weight:500;line-height:1.35;color:var(--ink)}
+figure.quote figcaption{font-size:16px;color:var(--muted)}
+article.study{flex:1 1 300px;border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;gap:12px;background:var(--card)}
+article.study small{font-size:14px;font-weight:600;color:var(--muted2)}
+article.study h3{font-family:Inter,system-ui,sans-serif;font-size:21px;font-weight:600}
+article.study p{margin:0;font-size:16px;color:var(--muted)}
+article.study a{font-weight:600;margin-top:auto}
+.note{margin:32px 0 0;font-size:16px;color:var(--muted);max-width:860px}
+.faq{max-width:900px}
+.faq h2{font-size:40px;margin-bottom:24px}
+.q{background:var(--card);border-radius:14px;border:1px solid var(--line);margin-bottom:12px}
+.q button{width:100%;min-height:56px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;background:none;border:0;cursor:pointer;text-align:left;font-family:Inter,system-ui,sans-serif;font-size:18px;font-weight:600;color:var(--ink)}
+.q button span.sign{font-size:24px;color:var(--green)}
+.q .a{display:none;margin:0;padding:0 22px 20px;font-size:17px;color:var(--muted)}
+.q.open .a{display:block}
+.cta{background:var(--green);color:#fff;padding:80px 0}
+.cta .wrap{display:flex;flex-wrap:wrap;gap:32px;align-items:center;justify-content:space-between}
+.cta h2{font-size:40px}
+.cta p{margin:0;font-size:18px}
+footer{background:var(--ink);color:var(--pale3);padding:40px 0;font-size:15px}
+footer p{margin:0 0 10px}
+footer strong{color:#fff}
+</style>
+</head>
+<body>
+<a id="top"></a>
+<nav aria-label="Main"><div class="wrap">
+  <a href="#top"><img src="root-intake-logo.png" alt="Root Intake"></a>
+  <div class="links">
+    <a href="#how">The pathway</a>
+    <a href="#clients">The intake</a>
+    <a href="#clinics">For clinicians</a>
+    <a href="#research">Research</a>
+    <a href="#faq">FAQ</a>
+    <a href="intake.html">Try the intake</a>
+    <a class="btn" href="#contact">Bring it to your clinic</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <img src="root-intake-logo.png" alt="">
+  <p class="eyebrow">A proposal for mental health intake</p>
+  <h1>Most intakes ask how you feel. Few ask what happened to you.</h1>
+  <p class="lead">Many people can't name their own symptoms. A trained clinician can recognize the patterns in a person's history. Root Intake is an intake pathway that asks about life events and circumstances, so dissociative identity disorder (DID) and other complex trauma disorders are found sooner.</p>
+  <div class="row">
+    <a class="btn lg" href="intake.html">Try the intake</a>
+    <a class="btn alt lg" href="#how">See the pathway</a>
+    <a class="btn alt lg" href="#research">Read the research</a>
+  </div>
+</div></header>
+
+<div class="band"><div class="wrap">
+  <h2>The problem, in three numbers</h2>
+  <div class="stats">
+    <div class="stat"><b>5%</b><span>of outpatients with a dissociative disorder had ever been diagnosed with one.</span><small>Foote et al., 2006</small></div>
+    <div class="stat"><b>5–12.4 yrs</b><span>average time in mental health treatment before a correct DID diagnosis.</span><small>Spiegel et al., 2011, as cited in Brand et al., 2019</small></div>
+    <div class="stat"><b>28.7%</b><span>of women with a dissociative disorder in one community study had ever received psychiatric treatment.</span><small>Şar et al., 2007</small></div>
+  </div>
+</div></div>
+
+<section id="how"><div class="wrap">
+  <div class="intro">
+    <h2>The pathway: Ask, Train, Connect</h2>
+    <p>Three parts that change the first thirty minutes of care. No new specialty clinic required.</p>
+  </div>
+  <div class="cards">
+    <div class="card"><span class="num">1</span><h3>Ask</h3><p>A short web-based intake asks about life events and circumstances, along with symptoms. Questions are mostly multiple choice, with everyday scenarios and optional spaces to add more.</p></div>
+    <div class="card"><span class="num">2</span><h3>Train</h3><p>Clinicians learn to recognize when a trauma history fits the pattern of a complex trauma or dissociative disorder, then confirm with a structured interview such as the DDIS or SCID-D.</p></div>
+    <div class="card"><span class="num">3</span><h3>Connect</h3><p>A positive assessment leads to a warm handoff: a dissociation-informed clinician, a safety plan and resources. A patient advisory group helps shape the pathway.</p></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap two">
+  <div id="clients">
+    <p class="eyebrow">For clients</p>
+    <h2>An intake that doesn't wear you out</h2>
+    <p>Long paperwork can become a reason to stop seeking care. This intake is built to be easier to finish.</p>
+    <ul>
+      <li>Mostly multiple-choice questions, instead of pages of 1-to-10 scales.</li>
+      <li>Everyday scenarios to choose from, so you don't have to find the words on the spot.</li>
+      <li>Optional spaces to add more, only when you want to.</li>
+      <li>Questions about your life and circumstances, along with how you feel.</li>
+      <li>You can skip any question. Your answers are never a diagnosis on their own.</li>
+    </ul>
+    <div><a class="btn" href="intake.html">Try the demo intake</a></div>
+  </div>
+  <div id="clinics">
+    <p class="eyebrow">For clinicians</p>
+    <h2>A two-hour online module</h2>
+    <p>Researchers describe a "dearth of training" on dissociative disorders (Brand et al., 2019). The proposed module, refreshed yearly, covers:</p>
+    <ol>
+      <li>How dissociation presents, including memory gaps, lost time and detachment</li>
+      <li>Reading a trauma history for patterns linked to complex disorders</li>
+      <li>Telling DID apart from PTSD, borderline personality disorder and psychosis</li>
+      <li>Asking without leading, and not pressing for details before a client is stable</li>
+    </ol>
+  </div>
+</div></section>
+
+<section><div class="wrap two" style="align-items:center">
+  <div>
+    <p class="eyebrow">Why this exists</p>
+    <h2>Built from twenty years on the other side of intake</h2>
+    <p>Root Intake was designed by Gabriella Wells, a psychology student training to become a trauma counselor in rural Southern Oregon. The intake and training are online, so they can reach small towns where specialists are scarce.</p>
+  </div>
+  <figure class="quote">
+    <blockquote>“The intake was meant to record my symptoms, but no one asked me about the circumstances that caused them.”</blockquote>
+    <figcaption>Gabriella Wells, founder</figcaption>
+  </figure>
+</div></section>
+
+<section id="research" class="alt"><div class="wrap">
+  <div class="intro"><h2>The research behind it</h2></div>
+  <div class="cards">
+    <article class="study"><small>American Journal of Psychiatry, 2006</small><h3>Foote et al.</h3><p>Interviewed 82 outpatients. 29% had a dissociative disorder and 6% had DID. Only 5% had ever been diagnosed. Those patients reported far more childhood abuse.</p><a href="https://doi.org/10.1176/ajp.2006.163.4.623">Read the study</a></article>
+    <article class="study"><small>Psychiatry Research, 2007</small><h3>Şar, Akyüz &amp; Doğan</h3><p>Surveyed 628 women in their homes. 1.1% had DID. Childhood abuse and neglect predicted a diagnosis. Most had never been treated.</p><a href="https://doi.org/10.1016/j.psychres.2006.01.005">Read the study</a></article>
+    <article class="study"><small>Journal of Traumatic Stress, 2019</small><h3>Brand et al.</h3><p>An online program for patients and their therapists led to improvement at one and two years. The authors call for wider clinician training.</p><a href="https://doi.org/10.1002/jts.22370">Read the study</a></article>
+  </div>
+  <p class="note">Why it matters: in one clinic, having a dissociative disorder was the strongest predictor of repeated suicide attempts (<a href="https://doi.org/10.1097/NMD.0b013e31815fa4e7">Foote et al., 2008</a>). Earlier recognition can save lives.</p>
+</div></section>
+
+<section id="faq"><div class="wrap faq">
+  <h2>Questions</h2>
+  <div class="q open"><button type="button" aria-expanded="true"><span>Why ask about life events instead of only symptoms?</span><span class="sign" aria-hidden="true">−</span></button><p class="a">Many people cannot name their own symptoms, especially dissociative ones like memory gaps or lost time. A clinician can recognize when a history fits the pattern of a complex trauma disorder and ask the right follow-up questions.</p></div>
+  <div class="q"><button type="button" aria-expanded="false"><span>Is my intake answer a diagnosis?</span><span class="sign" aria-hidden="true">+</span></button><p class="a">No. A history only raises the question. A diagnosis comes from a trained clinician after a structured interview, such as the DDIS or SCID-D.</p></div>
+  <div class="q"><button type="button" aria-expanded="false"><span>Why replace the paperwork?</span><span class="sign" aria-hidden="true">+</span></button><p class="a">For the founder, years of long forms and 1-to-10 scales became a reason to stop seeking care. Short multiple-choice questions and ready-made scenarios make the intake easier to finish, and you can add detail only when you want to.</p></div>
+  <div class="q"><button type="button" aria-expanded="false"><span>Do I have to share details about trauma?</span><span class="sign" aria-hidden="true">+</span></button><p class="a">No. You can skip any question. Clinicians are trained not to press for details before a person feels safe and stable.</p></div>
+  <div class="q"><button type="button" aria-expanded="false"><span>Do all researchers agree about DID?</span><span class="sign" aria-hidden="true">+</span></button><p class="a">Most researchers link DID to severe childhood trauma. Some argue that suggestion and media can shape symptoms. Careful structured interviews help clinicians tell the difference.</p></div>
+  <div class="q"><button type="button" aria-expanded="false"><span>How would we know it works?</span><span class="sign" aria-hidden="true">+</span></button><p class="a">A twelve-month pilot would track how many people finish the intake, how many receive a structured interview, and their experience. A larger study would then compare clinics using the pathway with clinics using their usual intake on time to an accurate diagnosis.</p></div>
+</div></section>
+
+<section id="contact" class="cta"><div class="wrap">
+  <div style="flex:1 1 520px;display:flex;flex-direction:column;gap:12px">
+    <h2>Bring Root Intake to your clinic</h2>
+    <p>Interested in piloting the intake or the training module? Get in touch.</p>
+  </div>
+  <a class="btn alt" href="mailto:[YOUR CONTACT EMAIL]">[YOUR CONTACT EMAIL]</a>
+</div></section>
+
+<footer><div class="wrap">
+  <p><strong>If you are in crisis in the U.S., call or text 988 to reach the Suicide and Crisis Lifeline.</strong></p>
+  <p>Root Intake is a proposal by Gabriella Wells. It is not a clinical service and does not diagnose anyone.</p>
+</div></footer>
+
+<script>
+document.querySelectorAll('.q button').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var q = btn.parentElement, open = q.classList.contains('open');
+    document.querySelectorAll('.q').forEach(function(x){ x.classList.remove('open'); x.querySelector('button').setAttribute('aria-expanded','false'); x.querySelector('.sign').textContent='+'; });
+    if(!open){ q.classList.add('open'); btn.setAttribute('aria-expanded','true'); btn.querySelector('.sign').textContent='−'; }
+  });
+});
+</script>
+</body>
+</html>

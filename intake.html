@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Root Intake questionnaire</title>
+<meta name="description" content="A demonstration of the Root Intake questionnaire: a short, skippable intake that asks about your life, not just your symptoms.">
+<link rel="icon" href="root-intake-logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0B4A1C;--green-dark:#073212;--ink:#16301E;--cream:#F8F0E0;--card:#FFFDF7;--line:#DDD9C6;--line2:#C9C4AC;--soft:#E8E8D0;--muted:#3F4A3F;--muted2:#5B655B}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+a{color:var(--green)}a:hover{color:var(--green-dark)}
+h1,h2{font-family:'Playfair Display',Georgia,serif;margin:0;line-height:1.15}
+nav{background:var(--card);border-bottom:1px solid var(--line)}
+nav .wrap{max-width:1200px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+nav img{height:48px;width:auto;display:block}
+nav a.back{color:var(--ink);text-decoration:none;padding:10px 0;font-size:16px;font-weight:500}
+main{max-width:760px;margin:0 auto;padding:48px 24px 80px;display:flex;flex-direction:column;gap:24px}
+.panel{background:var(--card);border-radius:20px;padding:40px 32px;display:flex;flex-direction:column;gap:20px}
+.eyebrow{margin:0;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+h1{font-size:clamp(32px,5vw,44px);line-height:1.1}
+h2{font-size:clamp(24px,4vw,32px);line-height:1.2}
+p{margin:0}
+.lead{font-size:18px;color:var(--muted)}
+ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:8px;font-size:17px;color:var(--muted)}
+.fine{font-size:15px;color:var(--muted2)}
+.btn{min-height:48px;padding:12px 24px;border:0;border-radius:999px;background:var(--green);color:#fff;font-family:Inter,system-ui,sans-serif;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center}
+.btn.lg{min-height:52px;padding:14px 28px;font-size:17px}
+.btn.alt{background:var(--card);color:var(--ink);border:1px solid var(--line2)}
+.btn.ghost{background:none;color:var(--muted2)}
+.meta{display:flex;justify-content:space-between;gap:16px;font-size:15px;color:var(--muted2)}
+.meta b{color:var(--green)}
+.bar{display:flex;gap:4px;margin-top:10px}
+.seg{flex:1 1 0;height:6px;border-radius:999px;background:var(--line)}
+.seg.on{background:var(--green)}
+.hint{font-size:16px;color:var(--muted2)}
+.kicker{font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted2)}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opt{width:100%;min-height:56px;display:flex;align-items:center;gap:14px;padding:16px 18px;border:2px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.4;text-align:left;cursor:pointer}
+.opt:hover{border-color:#9AAE8C}
+.opt.sel{border-color:var(--green);background:var(--soft)}
+.dot{display:block;flex:0 0 12px;width:12px;height:12px;border-radius:999px;background:var(--line)}
+.opt.sel .dot{background:var(--green)}
+.crisis{background:#FBEBDD;border-radius:14px;padding:18px 20px;font-size:16px;color:var(--ink)}
+.notewrap{display:flex;flex-direction:column;gap:10px}
+.notewrap label{font-size:15px;font-weight:600}
+textarea{width:100%;padding:14px 16px;border:2px solid var(--line);border-radius:14px;font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.5;color:var(--ink);resize:vertical;background:var(--card)}
+.linkbtn{min-height:44px;padding:10px 0;border:0;background:none;color:var(--green);font-family:Inter,system-ui,sans-serif;font-size:16px;font-weight:600;cursor:pointer;text-decoration:underline}
+.actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding-top:6px;border-top:1px solid #E6E2CF}
+.actions .right{display:flex;flex-wrap:wrap;gap:10px}
+.hidden{display:none}
+.demo{font-size:14px;color:var(--muted2);text-align:center}
+</style>
+</head>
+<body>
+<nav aria-label="Main"><div class="wrap">
+  <a href="index.html"><img src="root-intake-logo.png" alt="Root Intake"></a>
+  <a class="back" href="index.html">Back to the site</a>
+</div></nav>
+
+<main>
+  <section id="welcome" class="panel">
+    <p class="eyebrow">Before your first visit</p>
+    <h1>A few questions about your life, not just your symptoms.</h1>
+    <p class="lead">This takes about fifteen minutes. Most questions are multiple choice. Many describe an everyday situation, and you pick the reaction that sounds most like you. There are no right answers.</p>
+    <ul>
+      <li>You can skip any question.</li>
+      <li>You never have to give details. There is a space to add more if you want to.</li>
+      <li>Your answers are not a diagnosis. They help your clinician know where to start.</li>
+    </ul>
+    <p class="fine">This is a demonstration. Nothing you enter is saved or sent anywhere.</p>
+    <div><button type="button" class="btn lg" id="start">Begin</button></div>
+  </section>
+
+  <section id="question" class="hidden">
+    <div class="meta"><b id="section"></b><span id="progress"></span></div>
+    <div class="bar" id="bar" aria-hidden="true"></div>
+    <div class="panel" style="margin-top:24px">
+      <p class="kicker hidden" id="kicker">Which sounds most like you?</p>
+      <h2 id="prompt"></h2>
+      <p class="hint hidden" id="hint"></p>
+      <div class="opts" id="opts"></div>
+      <div class="crisis hidden" id="crisis"><strong>You don't have to wait for your appointment.</strong> If you are in the U.S., you can call or text 988 any time to reach the Suicide and Crisis Lifeline. Your clinician will see this answer first.</div>
+      <div class="notewrap">
+        <div id="noteclosed"><button type="button" class="linkbtn" id="opennote">Add more (optional)</button></div>
+        <div id="noteopen" class="hidden">
+          <label for="note">Add more, only if you want to</label>
+          <textarea id="note" rows="4" placeholder="Anything you want your clinician to know. You can leave this empty."></textarea>
+        </div>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn alt" id="back">Back</button>
+        <div class="right">
+          <button type="button" class="btn ghost" id="skip">Skip this question</button>
+          <button type="button" class="btn" id="next">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="done" class="panel hidden">
+    <p class="eyebrow">All done</p>
+    <h1>Thank you. Here's what happens next.</h1>
+    <p class="lead" id="summary"></p>
+    <ul>
+      <li>Your clinician reads your answers before your first session, so you don't have to start from the beginning.</li>
+      <li>They may ask a few follow-up questions. You can say no to any of them.</li>
+      <li>Nothing here is a diagnosis. Only a trained clinician can make one, and only after talking with you.</li>
+      <li>You can change any answer at your visit.</li>
+    </ul>
+    <div class="crisis hidden" id="crisis2"><strong>If you are in the U.S. and need someone now, call or text 988.</strong> You don't have to wait for your appointment.</div>
+    <div class="right" style="display:flex;flex-wrap:wrap;gap:12px">
+      <button type="button" class="btn alt" id="restart">Start over</button>
+      <a class="btn" href="index.html">Back to the site</a>
+    </div>
+  </section>
+
+  <p class="demo">Demonstration only. Root Intake is a proposal by Gabriella Wells. Answers are not saved.</p>
+</main>
+
+<script>
+(function(){
+var A='Right now', B='Everyday moments', C='What you have been through', D='How you are feeling', E='If this happened';
+var Q=[
+{id:'a1',s:A,p:'Where are you living right now?',o:['My own place','With family','With a partner or roommates','Somewhere temporary','Nowhere steady right now','Prefer not to say']},
+{id:'a2',s:A,p:'What takes up most of your days?',o:['Work','School','Caring for someone','Looking for work','Recovering from something','Not much, and that is hard','Prefer not to say']},
+{id:'a3',s:A,p:'When something goes wrong, who do you reach out to?',o:['A partner','Family','A friend','A professional','No one. I handle it alone','It depends']},
+{id:'a4',s:A,p:'Has anything big changed in the last year?',h:'Pick the one that matters most. You can tell us about others later.',o:['A move','A breakup or divorce','A death or loss','A new job, or losing one','A health problem','A new baby or new caregiving','Nothing major']},
+{id:'b1',s:B,sc:1,p:'You drive somewhere you go often. When you arrive...',o:['I remember the drive clearly','Parts of it are fuzzy, which seems normal','I do not remember much of it at all','This happens a lot, with driving and other things']},
+{id:'b2',s:B,sc:1,p:'A friend brings up a conversation you had last week.',o:['I remember it','I remember once they remind me','I have no memory of it, and that is not the first time','Prefer not to say']},
+{id:'b3',s:B,sc:1,p:'You open a drawer and find something you do not remember buying or making.',o:['That never happens','Once in a while','Often enough that I have stopped being surprised','Prefer not to say']},
+{id:'b4',s:B,sc:1,p:'In a stressful moment, your body...',o:['Stays with me','Feels far away or numb','Feels like I am watching from outside','I lose the moment entirely']},
+{id:'b5',s:B,sc:1,p:'Someone close to you says you seemed like a different person yesterday.',o:['They are exaggerating','I was in a mood','I hear that more than I would like','I do not remember yesterday well']},
+{id:'b6',s:B,sc:1,p:'When you think back on your childhood...',o:['I remember most of it','There are years I remember very little of','I would rather not go there yet','Prefer not to say']},
+{id:'e1',s:E,sc:1,p:'Your partner or a close friend is an hour late and has not texted.',o:['I figure something came up and go on with my day','I get a little annoyed, then let it go','My chest tightens. I am sure something is wrong, or that they are done with me','I go cold and stop caring whether they show up at all','Prefer not to say']},
+{id:'e2',s:E,sc:1,p:'Your boss or teacher raises their voice at someone else in the room.',o:['I notice it and move on','It bothers me for a while','My body freezes or goes on alert, as if it were aimed at me','I drift out of the room in my head until it is over','Prefer not to say']},
+{id:'e3',s:E,sc:1,p:'Someone gives you a warm, sincere compliment.',o:['I take it in','I feel awkward, but pleased','I do not believe it, or I wonder what they want','It makes me uneasy, like I am being set up','Prefer not to say']},
+{id:'e4',s:E,sc:1,p:'A smell, a song or a place suddenly brings back something from the past.',o:['It is a memory, and it passes','It stirs me up for a bit','It is as if it is happening again. My body reacts before I know why','I lose track of where I am for a while','Prefer not to say']},
+{id:'e5',s:E,sc:1,p:'You have a whole weekend alone with nothing planned.',o:['I enjoy it','I get bored or restless','A sinking feeling comes over me, like I do not exist unless someone is around','I keep busy so I do not have to feel anything','Prefer not to say']},
+{id:'e6',s:E,sc:1,p:'You have a disagreement with someone you care about.',o:['We talk it through','I stew on it for a day','I panic that I have ruined everything, then I am furious, then I feel empty','I shut down and cannot find words or feelings at all','Prefer not to say']},
+{id:'e7',s:E,sc:1,p:'Someone asks what you like, what you believe, or who you are.',o:['I can answer','It depends on the day','It changes so much depending on who I am with that I am not sure','I feel blank, like there is nobody there to ask','Prefer not to say']},
+{id:'e8',s:E,sc:1,p:'A sudden loud noise goes off behind you.',o:['I startle and recover','It rattles me for a minute','My heart races and I am on edge for the rest of the day','I feel strangely nothing, like it happened to someone else','Prefer not to say']},
+{id:'e9',s:E,sc:1,p:'You wake up and find messages you sent last night that you do not remember sending.',o:['That has never happened','I was tired. It happens','The tone does not sound like me at all','This happens often enough that I check my phone every morning','Prefer not to say']},
+{id:'e10',s:E,sc:1,p:'Someone you trust lets you down in a small way, like forgetting something you told them.',o:['I am a little hurt, then fine','I bring it up with them','The hurt is huge and out of proportion, and then I am ashamed of it','I quietly decide that I cannot rely on anyone','Prefer not to say']},
+{id:'e11',s:E,sc:1,p:'You feel a strong emotion rising: anger, grief or fear.',o:['I can feel it and let it pass','I distract myself until it fades','It takes over, and I say or do things I regret','My mind goes somewhere else, and I come back later not sure what happened','Prefer not to say']},
+{id:'e12',s:E,sc:1,p:'You look in the mirror.',o:['I see myself','Some days I do not like what I see','Sometimes the face does not feel like mine','Sometimes I am surprised by what I am wearing or how my hair is done','Prefer not to say']},
+{id:'c1',s:C,p:'Growing up, did you feel safe at home?',o:['Mostly yes','Sometimes','Mostly no','I would rather not answer right now']},
+{id:'c2',s:C,p:'Have you been through something you would call traumatic?',h:'No details needed. A yes or no is enough.',o:['Yes, as a child','Yes, as an adult','Yes, both','Not sure','No','Prefer not to say']},
+{id:'c3',s:C,p:'Have you been hurt by someone you depended on?',o:['Yes','No','Not sure','Prefer not to say']},
+{id:'c4',s:C,p:'Have you tried to get mental health care before?',o:['This is my first time','A few times','Many times','More times than I can count']},
+{id:'c5',s:C,p:'If you have, how did it go?',o:['It helped','It helped some','It did not fit','It made things harder','Does not apply']},
+{id:'d1',s:D,p:'In the last two weeks, your mood has mostly been...',o:['Steady','Low','Anxious','Up and down','Numb','Hard to describe']},
+{id:'d2',s:D,p:'How has sleep been?',o:['Fine','Trouble falling asleep','Waking up a lot','Nightmares','Sleeping too much']},
+{id:'d3',s:D,p:'Have you had thoughts of hurting yourself or ending your life?',h:'We ask everyone this. Answering honestly helps us help you.',o:['No','Yes, but no plan','Yes, and I am worried about it','Prefer not to say']}
+];
+var n=Q.length, step=0, answers={}, notes={};
+var $=function(id){return document.getElementById(id)};
+function show(id,on){ $(id).classList.toggle('hidden',!on); }
+function worried(){ return answers.d3==='Yes, and I am worried about it' || answers.d3==='Yes, but no plan'; }
+function render(){
+  show('welcome', step===0); show('question', step>=1 && step<=n); show('done', step>n);
+  window.scrollTo(0,0);
+  if(step>n){
+    var k=0; Q.forEach(function(q){ if(answers[q.id]) k++; });
+    $('summary').textContent='You answered '+k+' of '+n+' questions'+(k<n?' and skipped '+(n-k)+'. Skipping is fine.':'.');
+    show('crisis2', worried()); return;
+  }
+  if(step===0) return;
+  var q=Q[step-1];
+  $('section').textContent=q.s; $('progress').textContent='Question '+step+' of '+n;
+  var bar=$('bar'); bar.innerHTML=''; Q.forEach(function(_,i){ var s=document.createElement('span'); s.className='seg'+(i<step?' on':''); bar.appendChild(s); });
+  show('kicker', !!q.sc); $('prompt').textContent=q.p; show('hint', !!q.h); $('hint').textContent=q.h||'';
+  var opts=$('opts'); opts.innerHTML='';
+  q.o.forEach(function(label){
+    var b=document.createElement('button'); b.type='button'; b.className='opt'+(answers[q.id]===label?' sel':''); b.setAttribute('aria-pressed', answers[q.id]===label?'true':'false');
+    b.innerHTML='<span class="dot" aria-hidden="true"></span><span></span>'; b.lastChild.textContent=label;
+    b.addEventListener('click', function(){ answers[q.id]=label; render(); });
+    opts.appendChild(b);
+  });
+  show('crisis', q.id==='d3' && worried());
+  show('noteopen', false); show('noteclosed', true);
+  $('opennote').textContent = notes[q.id] ? 'Edit what you added' : 'Add more (optional)';
+  $('note').value = notes[q.id]||'';
+  $('next').textContent = step===n ? 'Finish' : 'Next';
+}
+$('start').addEventListener('click', function(){ step=1; render(); });
+$('next').addEventListener('click', function(){ step++; render(); });
+$('back').addEventListener('click', function(){ step--; render(); });
+$('skip').addEventListener('click', function(){ delete answers[Q[step-1].id]; step++; render(); });
+$('opennote').addEventListener('click', function(){ show('noteopen', true); show('noteclosed', false); $('note').focus(); });
+$('note').addEventListener('input', function(){ notes[Q[step-1].id]=$('note').value; });
+$('restart').addEventListener('click', function(){ step=0; answers={}; notes={}; render(); });
+render();
+})();
+</script>
+</body>
+</html>
